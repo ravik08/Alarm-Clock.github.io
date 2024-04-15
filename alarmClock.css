@@ -1,0 +1,147 @@
+*{
+  margin: 0;  
+  padding: 0;
+  font-family: sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: white;
+  overflow: hidden;
+}
+body{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url("bg2.gif");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
+}
+#background{
+    width: 100vw;
+    height: 100vh;
+}
+#alarm{
+    position: absolute;
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+}
+#alarm-bg{
+    position: absolute;
+    width: 380px;
+    height: 380px;
+    background: rgba(98, 97, 97, 0.292);
+    border-radius: 10px;
+    filter: blur(2px);
+    padding: 20px;
+}
+#cur-time{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 60px;
+}
+/*---- Styling Input1 ----*/
+#set-hours,#set-minutes{
+    width: 50px;
+    text-align: center;
+    padding: 5px;
+    border: none;
+    color: black;
+}
+#period{
+    padding: 5px;
+    border: none;
+    background-color: rgb(252, 48, 82);
+}
+/*---- Styling Input2 ----*/
+#date{
+    border: none;
+    padding: 5px;
+    outline: none;
+    color: black;
+}
+#set-alarm{
+    width: 100px;
+    padding: 8px;
+    border: none;
+    border-radius: 5px;
+    letter-spacing: 1px;
+    font-size: 12px;
+    background: rgb(252, 48, 82);
+}
+/*---- Styling Audio ----*/
+audio{
+    position: absolute;
+    top: -5%;
+    visibility: hidden;
+}
+#play,#pause{
+    position: absolute;
+    visibility: hidden; 
+}
+#play{
+    left: 0;
+}
+#pause{
+    right: 0;
+}
+/*---- Styling Saved Time ----*/
+#saved{
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#saved ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+/*---- Styling Notification ----*/
+#notify{
+    width: auto;
+    height: auto;
+    position: absolute;
+    top: 100px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    background: white;
+    border-radius: 5px;
+    visibility: hidden;
+    z-index: 1;
+}
+#notify h1{
+    margin-bottom: 20px;
+    color: black;
+    animation: scaled 2s linear infinite;
+}
+@keyframes scaled{
+    0%,100%{
+        scale: 0;
+    }
+    50%{
+        scale: 1;
+    }
+}
+#notify button{
+    padding: 8px;
+    border-radius: 5px;
+    border: none;
+    background: rgb(252, 48, 82);
+}
+
+@media screen and (max-width: 768px){
+    #cur-time{
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 40px;
+    }
+}

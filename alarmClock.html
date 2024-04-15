@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alarm Clock</title>
+    <link rel="stylesheet" href="alarmClock.css">
+</head>
+<body>
+    <div id="background"></div><br>
+    <div id="alarm-bg"></div>
+    <div id="alarm">
+        <h1 id="cur-time"></h1><br>
+        <div id="input1">
+            <label for="set-hours">Set Time</label> &nbsp;&nbsp;<input type="text" id="set-hours" placeholder="HH" onclick="OnButMute()"> : 
+            <input type="text" id="set-minutes" placeholder="MM"> &nbsp;
+            <select id="period">
+                <option id="option1" value="AM">AM</option>
+                <option id="option2" value="PM">PM</option>
+            </select><br><br>
+         </div>
+         <div id="input2">
+            <label for="date">Set Date</label>&nbsp;&nbsp; 
+            <input type="text" placeholder="dd-mm-yyyy" id="date">
+         </div><br>
+         <div class="alarm-btn">
+            <button id="set-alarm" onclick="Alarm()">Set Alarm</button>
+            <button id="play" onclick="playAudio()">Play</button>
+            <button id="pause" onclick="pauseAudio()">Pause</button>
+         </div><br>
+         <audio id="sound" controls>
+            <source src="memory_reboot.mp3" type="audio/mpeg">
+            Your browser does not support the audio tag.
+         </audio>
+         <div id="saved"></div>
+         <div id="notify">
+            <h1>Wake Up!</h1>
+            <button id="clear-alarm">Stop Alarm</button>
+         </div>
+    </div>
+    <script src="alarmClock.js"></script>
+</body>
+</html>
