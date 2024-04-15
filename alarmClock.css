@@ -143,6 +143,9 @@ audio{
 @media screen and (max-width: 768px){
     #cur-time{
         font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    font-size: 40px;
+        font-size: 40px;
+    }
+    #notify{
+        top: 90px;
     }
 }
